@@ -35,3 +35,6 @@ Digitar o nome de produto "${PRODUTO}" no campo de Pesquisa
     Input Text    locator=twotabsearchtextbox   text=${PRODUTO}
 Clicar no botão de pesquisa
     Click Button    locator=${BOTAO_PESQUISA}
+Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
+    Wait Until Element Is Visible    locator=(//span[contains(.,'${PRODUTO}')])[2]
+
